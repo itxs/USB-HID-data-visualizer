@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>768</width>
+    <width>818</width>
     <height>572</height>
    </rect>
   </property>
@@ -140,8 +140,8 @@
           </property>
           <property name="maximumSize">
            <size>
-            <width>30</width>
-            <height>20</height>
+            <width>16777215</width>
+            <height>16777215</height>
            </size>
           </property>
           <property name="text">
@@ -159,13 +159,13 @@
           </property>
           <property name="minimumSize">
            <size>
-            <width>30</width>
+            <width>40</width>
             <height>20</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>70</width>
+            <width>40</width>
             <height>20</height>
            </size>
           </property>
@@ -189,7 +189,7 @@
         </property>
         <property name="maximumSize">
          <size>
-          <width>100</width>
+          <width>16777215</width>
           <height>16777215</height>
          </size>
         </property>
@@ -218,6 +218,9 @@
           <height>16777215</height>
          </size>
         </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SingleSelection</enum>
+        </property>
        </widget>
       </item>
       <item>
@@ -236,7 +239,7 @@
         </property>
         <property name="maximumSize">
          <size>
-          <width>100</width>
+          <width>16777215</width>
           <height>16777215</height>
          </size>
         </property>
@@ -370,7 +373,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>768</width>
+     <width>818</width>
      <height>21</height>
     </rect>
    </property>

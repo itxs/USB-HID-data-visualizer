@@ -4,6 +4,20 @@
 #include <QApplication>
 #include <QListWidget>
 
+enum ItemType
+{
+    DataField = 0,
+    Adder
+};
+
+enum DeleteItemType
+{
+    DeleteFewItems = 1,
+    DeleteAllItems,
+    DeleteLastItem,
+    DeleteAdder
+};
+
 static const QStringList LIST_ITEMS = QStringList() << "uint8_t"
                                                     << "uint16_t"
                                                     << "uint32_t"
@@ -21,33 +35,9 @@ public:
 signals:
 
 public slots:
-    void onListDoubleClicked(const QModelIndex& index)
-    {
-        if (!index.isValid())
-        {
-            return;
-        }
-        if(QListWidget* listWgt = dynamic_cast<QListWidget*>( sender()))
-        {
-            if (QListWidgetItem* item = listWgt->takeItem(index.row()))
-            {
-                delete item;
-            }
-        }
-    }
-    void onDeleteItems()
-    {
-        if(m_listWgt)
-        {
-            QList<QListWidgetItem*> items = m_listWgt->selectedItems();
-            foreach(QListWidgetItem* item, items)
-            {
-                int row = m_listWgt->row(item);
-                m_listWgt->takeItem(row);
-                delete item;
-            }
-        }
-    }
+    void onListDoubleClicked(const QModelIndex& index);
+    void onDeleteItems(DeleteItemType delete_type);
+    void onCreateItems();
 private:
     QListWidget* m_listWgt;
 };

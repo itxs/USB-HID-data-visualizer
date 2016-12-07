@@ -11,13 +11,18 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = USBDatalogger
 TEMPLATE = app
 
+INCLUDEPATH += hidapi
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    listcontroller.cpp
+    listcontroller.cpp \
+    datastructurefield.cpp \
+    usb_hid.cpp
 
 HEADERS  += mainwindow.h \
-    datastructitem.h \
-    listcontroller.h
+    listcontroller.h \
+    datastructurefield.h \
+    hidapi/hidapi.h \
+    usb_hid.h
 
 FORMS    += mainwindow.ui

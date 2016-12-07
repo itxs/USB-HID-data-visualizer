@@ -7,7 +7,6 @@
 #include <QShortcut>
 #include <QLayout>
 #include <QComboBox>
-#include "datastructitem.h"
 #include "listcontroller.h"
 
 namespace Ui {
@@ -22,14 +21,19 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 private slots:
+    void onPushButtonIncrease();
+    void onPushButtonDecrease();
+    void onPushButtonClear();
     void onCheckBoxClicked();
+    void onKeyboardDelClicked();
+    void onDoubleClicked();
 private:
-    void makeItem(QListWidget* lstWgt);
+    void makeItem(QListWidget* lstWgt, ItemType type);
 
     Ui::MainWindow *ui;
     ListController* listcontroller;
-    QList<DataStructItem> Datastruct;
-    QShortcut* shortcut;
+   // QList<DataStructureField> Datastruct;
+    QShortcut* shortcut[3];
     QLayout* l;
 };
 
