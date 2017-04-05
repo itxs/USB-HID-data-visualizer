@@ -14,7 +14,6 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QCheckBox>
-#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLCDNumber>
@@ -54,11 +53,10 @@ public:
     QListWidget *listWidget_datastruct;
     QPushButton *pushButton_clearstruct;
     QVBoxLayout *verticalLayout_2;
-    QGraphicsView *graphicsView_dataplot;
     QHBoxLayout *horizontalLayout_4;
     QPushButton *pushButton_screenshot;
     QCheckBox *checkBox_crosshair;
-    QSpacerItem *horizontalSpacer;
+    QSpacerItem *horizontalSpacer_2;
     QLabel *label_3;
     QLCDNumber *lcdNumber_pps;
     QMenuBar *menuBar;
@@ -69,7 +67,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(768, 572);
+        MainWindow->resize(818, 572);
         LoadDataStructFile = new QAction(MainWindow);
         LoadDataStructFile->setObjectName(QStringLiteral("LoadDataStructFile"));
         SaveDataStructFile = new QAction(MainWindow);
@@ -146,7 +144,7 @@ public:
         sizePolicy.setHeightForWidth(label_4->sizePolicy().hasHeightForWidth());
         label_4->setSizePolicy(sizePolicy);
         label_4->setMinimumSize(QSize(50, 20));
-        label_4->setMaximumSize(QSize(30, 20));
+        label_4->setMaximumSize(QSize(16777215, 16777215));
 
         horizontalLayout->addWidget(label_4);
 
@@ -154,8 +152,8 @@ public:
         lineEdit_reportid->setObjectName(QStringLiteral("lineEdit_reportid"));
         sizePolicy.setHeightForWidth(lineEdit_reportid->sizePolicy().hasHeightForWidth());
         lineEdit_reportid->setSizePolicy(sizePolicy);
-        lineEdit_reportid->setMinimumSize(QSize(30, 20));
-        lineEdit_reportid->setMaximumSize(QSize(70, 20));
+        lineEdit_reportid->setMinimumSize(QSize(40, 20));
+        lineEdit_reportid->setMaximumSize(QSize(40, 20));
 
         horizontalLayout->addWidget(lineEdit_reportid);
 
@@ -167,7 +165,7 @@ public:
         sizePolicy.setHeightForWidth(pushButton_start->sizePolicy().hasHeightForWidth());
         pushButton_start->setSizePolicy(sizePolicy);
         pushButton_start->setMinimumSize(QSize(100, 0));
-        pushButton_start->setMaximumSize(QSize(100, 16777215));
+        pushButton_start->setMaximumSize(QSize(16777215, 16777215));
 
         verticalLayout->addWidget(pushButton_start);
 
@@ -180,6 +178,7 @@ public:
         listWidget_datastruct->setSizePolicy(sizePolicy1);
         listWidget_datastruct->setMinimumSize(QSize(100, 0));
         listWidget_datastruct->setMaximumSize(QSize(100, 16777215));
+        listWidget_datastruct->setSelectionMode(QAbstractItemView::SingleSelection);
 
         verticalLayout->addWidget(listWidget_datastruct);
 
@@ -188,7 +187,7 @@ public:
         sizePolicy.setHeightForWidth(pushButton_clearstruct->sizePolicy().hasHeightForWidth());
         pushButton_clearstruct->setSizePolicy(sizePolicy);
         pushButton_clearstruct->setMinimumSize(QSize(100, 0));
-        pushButton_clearstruct->setMaximumSize(QSize(100, 16777215));
+        pushButton_clearstruct->setMaximumSize(QSize(16777215, 16777215));
 
         verticalLayout->addWidget(pushButton_clearstruct);
 
@@ -198,12 +197,6 @@ public:
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setSpacing(6);
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        graphicsView_dataplot = new QGraphicsView(centralWidget);
-        graphicsView_dataplot->setObjectName(QStringLiteral("graphicsView_dataplot"));
-        graphicsView_dataplot->setMinimumSize(QSize(640, 480));
-
-        verticalLayout_2->addWidget(graphicsView_dataplot);
-
         horizontalLayout_4 = new QHBoxLayout();
         horizontalLayout_4->setSpacing(6);
         horizontalLayout_4->setObjectName(QStringLiteral("horizontalLayout_4"));
@@ -218,14 +211,14 @@ public:
 
         horizontalLayout_4->addWidget(checkBox_crosshair);
 
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_4->addItem(horizontalSpacer);
+        horizontalLayout_4->addItem(horizontalSpacer_2);
 
         label_3 = new QLabel(centralWidget);
         label_3->setObjectName(QStringLiteral("label_3"));
         QFont font;
-        font.setPointSize(11);
+        font.setPointSize(10);
         label_3->setFont(font);
 
         horizontalLayout_4->addWidget(label_3);
@@ -258,7 +251,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 768, 21));
+        menuBar->setGeometry(QRect(0, 0, 818, 21));
         menu = new QMenu(menuBar);
         menu->setObjectName(QStringLiteral("menu"));
         MainWindow->setMenuBar(menuBar);

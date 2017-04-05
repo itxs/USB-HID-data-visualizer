@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\listcontroller.o
+./debug\datastructitem.o
+./debug\listcontroller.o
+./debug\main.o
+./debug\mainwindow.o
+./debug\datastructitem.o
+./debug\moc_mainwindow.o
+./debug\moc_listcontroller.o
+);

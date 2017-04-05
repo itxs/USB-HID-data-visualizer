@@ -12,17 +12,21 @@ TARGET = USBDatalogger
 TEMPLATE = app
 
 INCLUDEPATH += hidapi
+LIBS += -L$$PWD/hidapi -lhidapi
+DEPENDPATH += hidapi
 
 SOURCES += main.cpp\
         mainwindow.cpp \
     listcontroller.cpp \
     datastructurefield.cpp \
-    usb_hid.cpp
+    usb_hid.cpp \
+    chartview.cpp
 
 HEADERS  += mainwindow.h \
     listcontroller.h \
     datastructurefield.h \
     hidapi/hidapi.h \
-    usb_hid.h
+    usb_hid.h \
+    chartview.h
 
 FORMS    += mainwindow.ui

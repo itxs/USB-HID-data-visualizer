@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\listcontroller.o
+./release\datastructitem.o
+./release\listcontroller.o
+./release\main.o
+./release\mainwindow.o
+./release\datastructitem.o
+./release\moc_mainwindow.o
+./release\moc_listcontroller.o
+);
